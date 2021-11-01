@@ -16,6 +16,15 @@ let minion1: string = "Kevin";
 let minion2: string = "Stuart";
 let minion3: string = "Bob";
 
+/*
+ * Typeinference automatically assigns a type to the variable if a corresponding value is assigned to it.
+ * Here you don't need to mention type string.
+ * This only works if you assigned a value to the variable.
+ */
+let master = "Gru";
+
+// master = 1; // This raise an Error.
+
 // array of srings
 let minions: string[] = ["Kevin", "Stuart", "Bob"];
 
@@ -37,7 +46,8 @@ minionsObj = {
   isSmart: true,
 };
 
-console.log(minionsObj['name']);
+console.log(minionsObj["name"]);
+console.table(minionsObj);
 
 // for array of Objects use [] after array structure initialization
 let minionsObjArray: {
@@ -47,3 +57,10 @@ let minionsObjArray: {
   age: number;
   isSmart: boolean;
 }[];
+
+// Using type union to declare multiple types to a single variable
+let enemies: string | string[] = "Scarlet Overkill";
+console.log(enemies);
+
+enemies = ["Scarlet Overkill", "Vector", "Eduardo Perez", "Balthazar Bratt"];
+console.log(enemies);
