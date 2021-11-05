@@ -28,14 +28,17 @@ let master = "Gru";
 // array of srings
 let minions: string[] = ["Kevin", "Stuart", "Bob"];
 
-// Object with a defined structure
-let minionsObj: {
+// Setting type alias
+type Minions = {
   name: string;
   talent: string[];
   height: string;
   age: number;
   isSmart: boolean;
 };
+
+// Object with a defined structure
+let minionsObj: Minions;
 
 // Delcaring Object
 minionsObj = {
@@ -50,13 +53,7 @@ console.log(minionsObj["name"]);
 console.table(minionsObj);
 
 // for array of Objects use [] after array structure initialization
-let minionsObjArray: {
-  name: string;
-  talent: string[];
-  height: string;
-  age: number;
-  isSmart: boolean;
-}[];
+let minionsObjArray: Minions[];
 
 // Using type union to declare multiple types to a single variable
 let enemies: string | string[] = "Scarlet Overkill";
