@@ -40,3 +40,20 @@ var enemies = "Scarlet Overkill";
 console.log(enemies);
 enemies = ["Scarlet Overkill", "Vector", "Eduardo Perez", "Balthazar Bratt"];
 console.log(enemies);
+// Class
+var Movie = /** @class */ (function () {
+    function Movie(name, rating, grade, directors, boxOfficeCollection) {
+        this.name = name;
+        this.rating = rating;
+        this.grade = grade;
+        this.directors = directors;
+        this.boxOfficeCollection = boxOfficeCollection;
+    }
+    Movie.prototype.listDirectors = function () {
+        return this.directors;
+    };
+    return Movie;
+}());
+var DespicableMe = new Movie("Despicable Me", 8.5, "A", ["Pierre Coffin", "Chris Renaud"], "$543.1 million");
+var listDirectors = DespicableMe.listDirectors();
+console.log(listDirectors);
