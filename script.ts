@@ -100,3 +100,13 @@ const DespicableMe = new Movie(
 
 let listDirectors = DespicableMe.listDirectors();
 console.log(listDirectors);
+
+interface Enemies {
+  name: string;
+  powers: string[];
+}
+
+class ScarletOverkill implements Enemies {
+  name: string;
+  powers: string[];
+}
